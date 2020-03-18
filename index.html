@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocetna|Svi proizvodi</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js">
+    </script>
+
+</head>
+
+<body >
+    <section class="header">
+        <div class="navbar">
+            <h3>Svi proizvodi</h3>
+            <div class="btn"><span><i class="material-icons">
+                        shopping_cart
+                    </i></span></div>
+        </div>
+        <div class="options"></div>
+    </section>
+    <main id='main'>
+        <div class="card" onclick="javascript:toDetails('DRL29fU8rAXSXvpexxfr')">
+            <img src="http://freeaussiestock.com/free/Victoria/Melbourne/slides/fed_square.jpg">
+            <div class="info">
+                <strong class="title">My Title</strong>
+                <p class="price">2,685 KM</p>
+            </div>
+        </div>
+        
+    </main>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAE8ypKBmc3sYKNfPdX2pM61fxq3mlO9vw",
+            authDomain: "products-45677.firebaseapp.com",
+            databaseURL: "https://products-45677.firebaseio.com",
+            projectId: "products-45677",
+            storageBucket: "products-45677.appspot.com",
+            messagingSenderId: "1056378206419",
+            appId: "1:1056378206419:web:f9d5e94b89776c9cd2fc26"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

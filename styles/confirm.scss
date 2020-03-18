@@ -1,0 +1,110 @@
+@import 'colors','buttons', 'cart';
+
+.order{
+    margin-top: 20px;
+    display:grid;
+    grid-template-rows: repeat(7, auto);
+    grid-template-columns: 30% 40% 10%;
+    grid-row-gap: 15px;
+    justify-content: end;	
+    grid-template-areas: 
+        '. tot '
+        'name-label name'
+        'surname-label surname'
+        'adress-label adress'
+        'mail-label mail'
+        'phone-label phone'
+        'send-label send';
+
+
+    .name,.surname,.adress,.mail,.phone{
+        
+        align-self: stretch;
+        
+        input{
+            width:100%;
+            height: 25px;
+  
+            border-radius: 13px;
+            background: #ECFFFB;
+            box-shadow: inset 17px 17px 34px #c9d9d5, 
+                        inset -17px -17px 34px #ffffff;
+        
+        }
+    }
+    .label{
+        justify-self: end;
+        align-self: center;
+    }
+    .name{
+        grid-area: name;
+    }
+    .name-label{
+        grid-area: name-label;
+      
+    }
+    .surname{
+        grid-area: surname;
+    }
+    .surname-label{
+        grid-area: surname-label;
+    }
+    .adress{
+        grid-area: adress;
+    }
+    .adress-label{
+        grid-area: adress-label;
+    }
+    .mail{
+        grid-area: mail;
+    }
+    .mail-label{
+        grid-area: mail-label;
+    }
+    .phone{
+        grid-area: phone;
+    }
+    .phone-label{
+        grid-area: phone-label;
+    }
+    .send{
+        grid-area: send;
+    }
+    .send-label{
+        grid-area: send-label;
+        align-self: center;
+    }
+   
+    .tot{
+        grid-area: tot;
+        font-style: italic;
+        font-size: 16px;
+        color:$secondary-color;
+    }
+    
+    font-size: 20px;
+    font-weight: bold;
+    
+    input[type="text"]
+{
+    font-size:22px;
+}
+
+
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+    .order{
+        grid-template-columns: 30% 40% 6%;
+    }
+    
+}
+@media only screen and (min-width: 1100px){
+    .order{
+        grid-template-columns: 50% 40% 10%;
+    }
+    
+}

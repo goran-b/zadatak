@@ -1,0 +1,178 @@
+.btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 76px;
+  background: linear-gradient(145deg, #d4e6e2, #fdffff);
+  -webkit-box-shadow: 5px 5px 10px #c9d9d5, -5px -5px 10px #ffffff;
+          box-shadow: 5px 5px 10px #c9d9d5, -5px -5px 10px #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-radius: 76px;
+  background: linear-gradient(145deg, #fdffff, #d4e6e2);
+  -webkit-box-shadow: 5px 5px 10px #c9d9d5,-5px -5px 10px #ffffff;
+          box-shadow: 5px 5px 10px #c9d9d5,-5px -5px 10px #ffffff;
+}
+
+.btn:active {
+  background-color: #d9f0eb;
+}
+
+.btn i {
+  background: -webkit-gradient(linear, left top, right top, from(#d85a5a), color-stop(#aa3737), to(#2e0808));
+  background: linear-gradient(to right, #d85a5a, #aa3737, #2e0808);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.primary-btn {
+  color: #ECFFFB;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 180px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #9b081c, #4831d3);
+  -webkit-box-shadow: 15px 15px 30px #acbab7,  -15px -15px 30px #ffffff;
+          box-shadow: 15px 15px 30px #acbab7,  -15px -15px 30px #ffffff;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: linear-gradient(145deg, #4831d3, #9b081c);
+  -webkit-box-shadow: inset 15px 15px 30px #312290,  inset -15px -15px 30px #553afa;
+          box-shadow: inset 15px 15px 30px #312290,  inset -15px -15px 30px #553afa;
+}
+
+.primary-btn:active {
+  background: #432EC5;
+  -webkit-box-shadow: 15px 15px 30px #acbab7,  -15px -15px 30px #ffffff;
+          box-shadow: 15px 15px 30px #acbab7,  -15px -15px 30px #ffffff;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70px;
+  padding: 10px;
+}
+
+.navbar .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #1E6262;
+  height: 50px;
+}
+
+.navbar .title i {
+  cursor: pointer;
+}
+
+.navbar .nav {
+  margin-right: 20px;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ECFFFB;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70px;
+  padding: 10px;
+}
+
+.navbar h3 {
+  padding-left: 10px;
+  color: #1E6262;
+}
+
+main {
+  padding: 10px;
+  --auto-grid-min-size: 16rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(185px, 1.2fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1.2fr));
+  grid-gap: 1rem;
+  cursor: pointer;
+}
+
+main .card {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  border-radius: 14px;
+  -webkit-box-shadow: 13px 13px 26px #c4d4d0, -13px -13px 26px #ffffff;
+          box-shadow: 13px 13px 26px #c4d4d0, -13px -13px 26px #ffffff;
+}
+
+main .card:hover {
+  background: linear-gradient(145deg, #fdffff, #d4e6e2);
+  -webkit-box-shadow: 12px 12px 24px #c4d4d0,-12px -12px 24px #ffffff;
+          box-shadow: 12px 12px 24px #c4d4d0,-12px -12px 24px #ffffff;
+}
+
+main .card:active {
+  background: #ECFFFB;
+  -webkit-box-shadow: inset 12px 12px 24px #c4d4d0,  inset -12px -12px 24px #ffffff;
+          box-shadow: inset 12px 12px 24px #c4d4d0,  inset -12px -12px 24px #ffffff;
+}
+
+main .card img {
+  width: 95%;
+  padding: 5px;
+}
+
+main .card .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 10px;
+}
+
+main .card .info .price {
+  font-weight: bold;
+  color: #1E6262;
+}
+/*# sourceMappingURL=main.css.map */
