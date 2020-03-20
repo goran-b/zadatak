@@ -17,29 +17,36 @@
     <section class="header">
         <div class="navbar">
             <div class="title">
-                <p ><i onclick='goBack()' class="material-icons">arrow_back</i></p>
+                <p><i onclick='goBack()' class="material-icons">arrow_back</i></p>
                 <p>
-                    <h3 > &nbsp; Detalji</h3>
+                    <h3> &nbsp; Detalji</h3>
                 </p>
             </div>
-            <div onclick='goCart()' class="btn nav"><i class="material-icons">
-                    shopping_cart
+            <div class='btn-flex'>
+                <div onclick='goHome()' class="btn nav"><i class="material-icons">
+                    home
                 </i>
+            </div>
+                <div onclick='goCart()' class="btn nav"><i class="material-icons">
+                        shopping_cart
+                    </i>
+                </div>
             </div>
         </div>
         <div class="options"></div>
     </section>
     <main>
-        <div class="img " id='img'><div class="numbertext" id='numbertext'></div><img alt='Photo'>
+        <div class="img " id='img'>
+            <div class="numbertext" id='numbertext'></div><img alt='Photo'>
         </div>
         <div class="slider">
-            
+
             <div class="dots">
                 <span class="dot" onclick="showImage(0)"></span>
                 <span class="dot" onclick="showImage(1)"></span>
                 <span class="dot" onclick="showImage(2)"></span>
                 <span class="dot" onclick="showImage(3)"></span>
-                <span class="dot" onclick="showImage(4)"></span>               
+                <span class="dot" onclick="showImage(4)"></span>
             </div>
             <div class="buttons">
                 <div class="btn" onclick="nextImage(-1)"><i class="material-icons">
@@ -75,7 +82,7 @@
 
         </div>
         <div class="total" id='total'>
-            <h2 >Ukupno: 5,268 KM</h2>
+            <h2>Ukupno: 5,268 KM</h2>
         </div>
         <div class="footer">
 

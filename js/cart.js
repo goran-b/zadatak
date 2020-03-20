@@ -165,5 +165,5 @@ function saveProducts() {
 }
 
 function toConfirm(){
-    location.replace("confirm.html")
+    location.assign("./confirm.html")
 }

@@ -145,3 +145,7 @@ function addToCart() {
         location.reload();
     }
 }
+
+function goCart(){
+    window.location.assign("./cart.html")  
+}

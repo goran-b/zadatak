@@ -170,4 +170,6 @@ function orderProducts() {
     
 
 }
-
+function goCart(){
+    window.location.assign("./cart.html")  
+}

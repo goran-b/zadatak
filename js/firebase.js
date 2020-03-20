@@ -13,12 +13,10 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 function goBack() {
-    
-    location.href = document.referrer; return false;
+    window.history.back();
+    return false;
+    // window.location.href = document.referrer; 
 }
 function goHome(){
-    location.replace("/index.html")
-}
-function goCart(){
-    location.replace("/pages/cart.html")
+    window.location.assign("./../index.html")
 }

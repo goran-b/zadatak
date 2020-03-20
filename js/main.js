@@ -32,5 +32,9 @@ ucitaj().then((a)=> {
 
 function toDetails(id){
 
-    location.replace('pages/details.html?id='+ id)  
+    window.location.assign('pages/details.html?id='+ id)  
+}
+function goCart(){
+  
+    window.location.assign("./pages/cart.html")
 }
