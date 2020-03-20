@@ -97,7 +97,8 @@
   margin-right: 20px;
 }
 
-body, html {
+body,
+html {
   height: 100%;
 }
 
@@ -120,9 +121,33 @@ body {
           box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(255, 255, 255, 0.9);
 }
 
-.card img {
+.card .img {
+  padding-right: 10px;
+  max-width: 100%;
+  width: 20%;
+}
+
+.card .img img {
   height: 75px;
   width: auto;
+}
+
+.card .product-title {
+  padding-left: 10px;
+  margin-left: 40px;
+}
+
+.card .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card .info {
@@ -168,9 +193,11 @@ body {
   width: 100%;
 }
 
-.main .table table, .main .table th, .main .table td {
+.main .table table,
+.main .table th,
+.main .table td {
   border-radius: 15px;
-  border: 1px solid  white;
+  border: 1px solid white;
   border-collapse: collapse;
 }
 
@@ -178,7 +205,8 @@ body {
   color: #1E6262;
 }
 
-.main .table th, .main .table td {
+.main .table th,
+.main .table td {
   padding: 15px;
   text-align: left;
   border-radius: 16px;
@@ -216,7 +244,7 @@ i {
   cursor: pointer;
 }
 
-.prize-total {
+.price-total, .bold {
   font-weight: bold;
 }
 

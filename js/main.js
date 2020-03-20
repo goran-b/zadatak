@@ -32,5 +32,5 @@ ucitaj().then((a)=> {
 
 function toDetails(id){
 
-    window.open('pages/details.html?id='+ id)  
+    location.replace('pages/details.html?id='+ id)  
 }

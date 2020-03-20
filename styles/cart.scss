@@ -1,16 +1,19 @@
-@import 'colors','buttons';
-body,html{
+@import 'colors', 'buttons';
+
+body,
+html {
     height: 100%;
-    
+
 }
 
-body{
-    margin:0;
+body {
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: $base-color;
 }
-.card{
-    display:none;
+
+.card {
+    display: none;
     box-sizing: border-box;
     margin: auto;
     width: 90%;
@@ -18,24 +21,42 @@ body{
     padding: 10px;
     margin-top: 12px;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(255, 255, 255, 0.9);
-    img{
-        height:75px;
-        width:auto;
+
+    .img {
+        padding-right: 10px;
+        max-width: 100%;
+        width: 20%;
+
+        img {
+            height: 75px;
+            width: auto;
+        }
     }
-    .info{
-        display:flex;
+    .product-title{
+        padding-left: 10px;
+        margin-left: 40px;
+    }
+    .top {
+        display: flex;
         flex-direction: row;
-        justify-content:space-between;
+        
         align-items: center;
     }
-    .btn{       
+    .info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn {
         height: 30px;
         width: 30px;
     }
 
 }
 
-.main{
+.main {
     box-sizing: border-box;
     margin: auto;
     width: 80%;
@@ -43,97 +64,113 @@ body{
     padding: 10px;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(255, 255, 255, 0.9);
 
-    .table{
-        .btn{       
+    .table {
+        .btn {
             height: 30px;
             width: 30px;
         }
+
         table {
             box-sizing: border-box;
-            width: 100%;    
+            width: 100%;
         }
-        table, th, td {
+
+        table,
+        th,
+        td {
             border-radius: 15px;
-            border: 1px solid  white;
+            border: 1px solid white;
             border-collapse: collapse;
-            
-          }
-          th{
-              color:$secondary-color;
-          }
-          th, td {
+
+        }
+
+        th {
+            color: $secondary-color;
+        }
+
+        th,
+        td {
             padding: 15px;
             text-align: left;
             border-radius: 16px;
-          }
-         
-        img{
-            height:75px;
-            width:auto;
         }
-        .cancel{
+
+        img {
+            height: 75px;
+            width: auto;
+        }
+
+        .cancel {
             text-align: center;
         }
-        
-      
+
+
     }
-  
-} 
-.amount{
+
+}
+
+.amount {
     display: flex;
     align-self: center;
     justify-self: center;
-    justify-content:space-between;
+    justify-content: space-between;
     text-align: center !important;
-    p{
+
+    p {
         font-weight: bold;
         font-size: 18px;
-        margin:10px ;
-       
+        margin: 10px;
+
     }
-    
+
 }
-i{
-        cursor: pointer;
+
+i {
+    cursor: pointer;
 }
-.prize-total{
+
+.price-total, .bold {
     font-weight: bold;
 }
-.cancel{
-    color:rgb(121, 6, 6);
+
+.cancel {
+    color: rgb(121, 6, 6);
 }
 
 
-.confirm{
+.confirm {
     display: flex;
     box-sizing: border-box;
     margin: auto;
     margin-top: 30px;
-    width:50%;
-    justify-content:center;
+    width: 50%;
+    justify-content: center;
     border-radius: 16px;
     padding: 10px;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(255, 255, 255, 0.9);
-    .final{
+
+    .final {
         display: flex;
         flex-direction: column;
-        align-items: flex-end; 
+        align-items: flex-end;
         font-size: 18px;
     }
-    
-    
+
+
 }
 
-@media only screen and (max-width: 768px){
-        .main{
-            display:none;
-        }
-        .card{
-            display:block;
-        }
-        .confirm{
-            max-width:90%;
-            width:auto;
-        }
-        
+@media only screen and (max-width: 768px) {
+    .main {
+        display: none;
     }
+
+    .card {
+        display: block;
+    }
+
+    .confirm {
+        max-width: 90%;
+        width: auto;
+    }
+
+}
