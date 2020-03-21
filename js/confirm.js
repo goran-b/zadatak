@@ -166,7 +166,7 @@ function orderProducts() {
         phone: form.phone.value
     }
 
-    alert(`Form Submitted Successfully!`);
+    alert(`Narudžba poslana!`);
     
 
 }
