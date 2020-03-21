@@ -141,7 +141,7 @@ function addToCart() {
         return
     } else {
         localStorage.setItem("products", JSON.stringify(STORAGE));
-        alert(`Uspješno ste dodavli ${curentQuantity} proizvoda!`)
+        alert(`Uspješno ste dodali ${curentQuantity} proizvoda!`)
         location.reload();
     }
 }
