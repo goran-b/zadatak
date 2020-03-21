@@ -8,61 +8,40 @@
     <link rel="stylesheet" href="./../styles/confirm.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js">
+    </script>
 </head>
 
 <body>
     <section class="header">
         <div class="navbar">
             <div class="title">
-                <p><i class="material-icons">arrow_back</i></p>
+                <p><i onclick='goBack()' class="material-icons">arrow_back</i></p>
                 <p>
                     <h3> &nbsp; Naručivanje</h3>
                 </p>
             </div>
-            <div class="btn nav"><i class="material-icons">
+            <div class='btn-flex'>
+                <div onclick='goHome()' class="btn nav"><i class="material-icons">
                     home
                 </i>
+            </div>
+                <div onclick='goCart()' class="btn nav"><i class="material-icons">
+                        shopping_cart
+                    </i>
+                </div>
             </div>
         </div>
         <div class="options"></div>
     </section>
     <main>
-        <div class="card">
-            <div class="info">
-                <div class="img"><img src="http://freeaussiestock.com/free/Victoria/Melbourne/slides/fed_square.jpg">
-                </div>
-                <p>2,635 KM</p>
-                <p>X</p>
-                <p>2</p>
-                <p>=</p>
-                <p class='prize-total'>5,270 KM</p>
-
-            </div>
-            <div class="product-title">
-                <p>My Title</p>
-
-            </div>
+        <div id='main' class="container">
         </div>
-        <div class="card">
-            <div class="info">
-                <div class="img"><img src="http://freeaussiestock.com/free/Victoria/Melbourne/slides/fed_square.jpg">
-                </div>
-                <p>2,635 KM</p>
-                <p>X</p>
-                <p>2</p>
-                <p>=</p>
-                <p class='prize-total'>5,270 KM</p>
 
-            </div>
-            <div class="product-title">
-                <p>My Title</p>
-
-            </div>
-        </div>
         <div class='main'>
-
             <div class="table">
-                <table>
+                <table id='table'>
                     <tr>
                         <th>Slika</th>
                         <th>Naziv</th>
@@ -70,66 +49,40 @@
                         <th>Kolicina</th>
                         <th>Ukupno</th>
                     </tr>
-                    <tr>
-                        <td><img src="http://freeaussiestock.com/free/Victoria/Melbourne/slides/fed_square.jpg"></td>
-                        <td>My Title</td>
-                        <td>
-                            <p>2,635 KM</p>
-                        </td>
-                        <td>
-                            <div class="amount">
-                                <p>2</p>
-                            </div>
-                        </td>
-                        <td>
-                            <p class='prize-total'>5,270 KM</p>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td><img src="http://freeaussiestock.com/free/Victoria/Melbourne/slides/fed_square.jpg"></td>
-                        <td>My Title</td>
-                        <td>
-                            <p>2,635 KM</p>
-                        </td>
-                        <td>
-                            <div class="amount">
-                                <p>2</p>
-                            </div>
-                        </td>
-                        <td>
-                            <p class='prize-total'>5,270 KM</p>
-                        </td>
-
-                    </tr>
                 </table>
             </div>
-
         </div>
-        <div class='order'>
+        <div id="errors"></div>
+        <form class='order' action="javascript:orderProducts()">
+            
             <div class="tot label">
-                <div><strong>
+                <div><strong id='totalProducts'>
                         Proizvoda: 6 Ukupno: 7,635 KM</strong></div>
             </div>
+            
             <div class="name-label label">Ime:</div>
-            <div class="name"><input type="text" name="name" id="name"></div>
+            <div class="name"><input type="text" name="name" id="name" required></div>
             <div class="surname-label label">Prezime:</div>
-            <div class="surname"><input type="text" name="surname" id="surname"></div>
+            <div class="surname"><input type="text" name="surname" id="surname" required></div>
             <div class="adress-label label">Adresa:</div>
-            <div class="adress"><input type="text" name="adress" id="adress"></div>
-            <div class="mail-label label">Email:</div>
-            <div class="mail"><input type="text" name="mail" id="mail"></div>
-            <div class="phone-label label">Telefon:</div>
-            <div class="phone"><input type="text" name="phone" id="phone"></div>
-            <div class="send-label label">
-                <strong>Ukupno: 7,635 KM</strong></div>
-            <div class="send">
-                <div class="primary-btn">Naručivanje</div>
+            <div class="adress">
+                <textarea name="adress" id="adress" rows="4" cols="40" required></textarea>
+        
             </div>
-
-        </div>
-
+            <div class="mail-label label">Email:</div>
+            <div class="mail"><input type="text" name="mail" id="mail" required></div>
+            <div class="phone-label label">Telefon:</div>
+            <div class="phone"><input type="number" name="phone" id="phone" required></div>
+            <div class="send-label label">
+                <strong id='totalPrice'>Ukupno: 7,635 KM</strong></div>
+            <div class="send">
+                <div class="primary-btn" onclick='orderProducts()'>Pošalji
+                </div>
+            </div>
+        </form>
     </main>
+    <script src="./../js/firebase.js"></script>
+    <script src="./../js/confirm.js"></script>
 </body>
 
 </html>

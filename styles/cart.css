@@ -20,8 +20,8 @@
 .btn:hover {
   border-radius: 76px;
   background: linear-gradient(145deg, #fdffff, #d4e6e2);
-  -webkit-box-shadow: 5px 5px 10px #c9d9d5,-5px -5px 10px #ffffff;
-          box-shadow: 5px 5px 10px #c9d9d5,-5px -5px 10px #ffffff;
+  -webkit-box-shadow: 5px 5px 10px #c9d9d5, -5px -5px 10px #ffffff;
+          box-shadow: 5px 5px 10px #c9d9d5, -5px -5px 10px #ffffff;
 }
 
 .btn:active {
@@ -53,21 +53,21 @@
   margin-left: 20px;
   border-radius: 14px;
   background: linear-gradient(145deg, #9b081c, #4831d3);
-  -webkit-box-shadow: 15px 15px 30px #acbab7,  -15px -15px 30px #ffffff;
-          box-shadow: 15px 15px 30px #acbab7,  -15px -15px 30px #ffffff;
+  -webkit-box-shadow: 15px 15px 30px #acbab7, -15px -15px 30px #ffffff;
+          box-shadow: 15px 15px 30px #acbab7, -15px -15px 30px #ffffff;
   cursor: pointer;
 }
 
 .primary-btn:hover {
   background: linear-gradient(145deg, #4831d3, #9b081c);
-  -webkit-box-shadow: inset 15px 15px 30px #312290,  inset -15px -15px 30px #553afa;
-          box-shadow: inset 15px 15px 30px #312290,  inset -15px -15px 30px #553afa;
+  -webkit-box-shadow: inset 15px 15px 30px #312290, inset -15px -15px 30px #553afa;
+          box-shadow: inset 15px 15px 30px #312290, inset -15px -15px 30px #553afa;
 }
 
 .primary-btn:active {
   background: #432EC5;
-  -webkit-box-shadow: 15px 15px 30px #acbab7,  -15px -15px 30px #ffffff;
-          box-shadow: 15px 15px 30px #acbab7,  -15px -15px 30px #ffffff;
+  -webkit-box-shadow: 15px 15px 30px #acbab7, -15px -15px 30px #ffffff;
+          box-shadow: 15px 15px 30px #acbab7, -15px -15px 30px #ffffff;
 }
 
 .navbar {
@@ -97,7 +97,25 @@
   margin-right: 20px;
 }
 
-body, html {
+.btn-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.btn-flex div {
+  margin-right: 10px;
+}
+
+body,
+html {
   height: 100%;
 }
 
@@ -120,9 +138,33 @@ body {
           box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(255, 255, 255, 0.9);
 }
 
-.card img {
+.card .img {
+  padding-right: 10px;
+  max-width: 100%;
+  width: 20%;
+}
+
+.card .img img {
   height: 75px;
   width: auto;
+}
+
+.card .product-title {
+  padding-left: 10px;
+  margin-left: 40px;
+}
+
+.card .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card .info {
@@ -168,9 +210,11 @@ body {
   width: 100%;
 }
 
-.main .table table, .main .table th, .main .table td {
+.main .table table,
+.main .table th,
+.main .table td {
   border-radius: 15px;
-  border: 1px solid  white;
+  border: 1px solid white;
   border-collapse: collapse;
 }
 
@@ -178,7 +222,8 @@ body {
   color: #1E6262;
 }
 
-.main .table th, .main .table td {
+.main .table th,
+.main .table td {
   padding: 15px;
   text-align: left;
   border-radius: 16px;
@@ -216,7 +261,7 @@ i {
   cursor: pointer;
 }
 
-.prize-total {
+.price-total, .bold {
   font-weight: bold;
 }
 
