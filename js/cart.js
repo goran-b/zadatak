@@ -136,7 +136,7 @@ function clearProducts() {
 }
 
 function removeProduct(id) {
-    if (!confirm('Da li ste sigurni da zelite uklnoiti proizvod?')) {
+    if (!confirm('Da li ste sigurni da zelite ukloniti proizvod?')) {
         return
     }
 
